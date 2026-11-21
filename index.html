@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Un regalo para Isa</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <!-- Portada de Bienvenida-->
+     <section id="portada">
+        <div class="contenido-portada">        
+            <h1>¡Feliz cumpleaños Isa!</h1>
+
+            <p>💕Un regalo especialmente preparado para ti. 💕</p>
+
+            <div class="botones-portada">
+                <button id="boton-entrar">ENTRAR</button>
+                <button id="boton-salir">SALIR</button>
+            </div>
+
+  
+        </div>
+     </section>
+
+    <!-- Sorpresa de los 18 años -->
+     <section id="sorpresa" hidden>
+        <div class="hoja-vida">
+
+            <img
+                src="multimedia/portada/imagenes/hoja-vida.png"
+                alt="Curriculum vitae"
+                class="imagen-hoja-vida"
+            >
+        </div>
+     </section>
+
+     <!-- Contenido principal de la Página-->
+      <main id="sitio" hidden>
+        
+        <!--Menú de Navegación-->
+        <nav id="menu-principal">
+            <a href="#inicio">Inicio</a>
+            <a href="#sobre-diaz">Un poco de Isa</a>
+            <a href="#album">Álbum</a>
+            <a href="#galeria">Galería</a>
+            <a href="#bloc-notas">Algunos Mensajes</a>
+            <a href="#cancion">Canción</a>
+            <a href="#despedida">Despedida</a>
+        </nav>
+
+        <!-- Botón de música-->
+         <button id="boton-sonido" aria-label="Encender música">🔇</button>
+
+        <!-- Presentación -->
+         <section id="inicio">
+            <div class="contenido-inicio">
+                <p class="subtitulo-inicio">Un regalo hecho con mucho cariño</p>
+
+                <h1>Un día especial</h1>
+
+                <p class="mensaje-inicio">
+                    Hoy celebramos tu vida, recuerdos y todas las cosas bonitas que te hacen ser tú.
+                </p>
+
+                <span class="decoracion-inicio">🌻 💛 🌻</span>
+            </div>
+         </section>
+
+         <!-- Sobre Isa -->
+          <section id="sobre-diaz">
+            <div class="encabezado-seccion">
+                <p class="subtitulo-seccion">Conociendo a la Cumpleañera</p>
+                <h2>Un poco de nuestra María</h2>
+                <p>Pequeños detalles que hacen única a una persona especial.</p>
+            </div>
+
+            <div class="tarjetas-gustos">
+                <div class="tarjeta-gusto">
+                    <span>🌻</span>
+                    <h3>Flores favoritas</h3>
+                    <p>¡Los Girasoles! Sus flores favoritas, llenas de alegría y color.</p>
+                </div>
+
+                <div class="tarjeta-gusto">
+                    <span>🎨</span>
+                    <h3>Colores favoritos</h3>
+                    <p>Amarillo brillante, azul cian y el negro (es emo).</p>
+                </div>
+
+                <div class="tarjeta-gusto">
+                    <span>😸</span>
+                    <h3>Animales favoritos</h3>
+                    <p>Obviamente los gatos; como Nieve y Melody, y perritas como Nabi y Mia, pero también los tiburones y los monos</p>
+                </div>
+
+                <div class="tarjeta-gusto">
+                    <span>✨</span>
+                    <h3>Algunas curiosidades</h3>
+                    <p>
+                        Le encantan Arcane, Banana Fish y The Owl House.
+                        Su fruta favorita son los bananos.
+                        ¡Y tiene una curiosa anécdota con la punta de un lápiz en su pierna!
+                    </p>
+                </div>
+            </div>
+          </section>
+        
+          <!-- Álbum de Recuerdos -->
+           <section id="album">
+            <div class="encabezado-seccion">
+                <p class="subtitulo-seccion">Recuerdos que Perduran</p>
+                <h2>Álbum de Recuerdos</h2>
+                <p>Personas especiales, momentos inolvidables y mucho cariño.</p>
+            </div>
+
+            <div class="personas-album">
+
+                <article class="tarjeta-persona" data-persona="papa">
+                    <h3>🖤Papá🖤</h3>
+                    <p>Recuerdos de dos amantes del rock</p>
+                </article>
+
+                <article class="tarjeta-persona" data-persona="mama">
+                    <h3> 🌹Mamá🌹</h3>
+                    <p>Recuerdos de Bela y su Mami</p>
+                </article>
+
+                <article class="tarjeta-persona" data-persona="hermana">
+                    <h3>💓Hanna💓</h3>
+                    <p>Recuerdos especiales de dos personas que comparten mucha historia</p>
+                </article>
+
+                <article class="tarjeta-persona" data-persona="yo">
+                    <h3>💙Mi noviecito💙</h3>
+                    <p>Recuerdos de la mejor pareja 😎</p>
+                </article>
+
+                
+
+            </div>
+           </section>
+        
+        <!--Ventana de Álbumes-->
+        <div id="modal-album" class="modal-album" hidden>
+
+            <div class="contenido-modal-album">
+                <button id="cerrar-album" class="cerrar-modal">
+                    ❌
+                </button>
+
+                <h2 id="titulo-album">Álbum de Recuerdos</h2>
+
+                <div id="fotos-album" class="fotos-album">
+                    <!-- Aquí salen las fotos-->
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal de recuerdos con amigos-->
+         <div id="modal-recuerdos-amigos" class="modal-album" hidden>
+            <div class="contenido-modal-album">
+                <button id="cerrar-recuerdos-amigos" class="cerrar-modal">
+                    ❌
+                </button>
+
+                <h2 id="titulo-recuerdos-amigos"> Más recuerdos de Isa y sus amigos</h2>
+                <div id="fotos-recuerdos-amigos" class="fotos-album"></div>
+            </div>
+         </div>
+        <!-- Visor de fotografías-->
+         <div id="visor-fotos" class="visor-fotos" hidden>
+            <button id="cerrar-visor" class="cerrar-visor">
+                ❌
+            </button>
+            <button id="foto-anterior" class="flecha-foto">
+                ❮
+            </button>
+            <img id="imagen-ampliada" src="" alt="Fotografía ampliada">
+
+            <button id="foto-siguiente" class="flecha-foto">
+                ❯
+            </button>
+         </div>
+        <!-- Galería General -->
+         <section id="galeria">
+            <div class="encabezado-seccion">
+                <p class="subtitulo-seccion">PEQUEÑOS INSTANTES, GRANDES RECUERDOS</p>
+                <h2>Galería de Isabela</h2>
+                <p>Una colección de momentos que merecen quedarse para siempre.</p>
+            </div>
+
+            <div class="contenedor-galeria">
+
+                <div class="foto-galeria">
+                    <div class="espacio-foto">
+                        <img src="multimedia/galeria/foto-general1.jpg" alt="Recuerdo 1 de Isa">
+                    </div>
+                    <p>Un recuerdo especial</p>
+                </div>
+
+                <div class="foto-galeria">
+                    <div class="espacio-foto">
+                        <img src="multimedia/galeria/foto-general2.jpg" alt="Recuerdo 2 de isa">
+                    </div>
+                    <p>Un momento muy lindo</p>
+                </div>
+
+                <div class="foto-galeria">
+                    <div class="espacio-foto">
+                        <img src="multimedia/galeria/foto-general3.jpg" alt="Recuerdo 3 de Isa">
+                    </div>
+                    <p>Un cumpleaños muy feliz</p>
+                </div>
+
+                <div class="foto-galeria">
+                    <div class="espacio-foto">
+                        <img src="multimedia/galeria/foto-general8.jpg" alt="Recuerdo 7 de Isa">
+                    </div>
+                    <p>Pijamadas Eternas</p>
+                </div>
+
+                <div class="foto-galeria">
+                    <div class="espacio-foto">
+                        <img src="multimedia/galeria/foto-general5.jpg" alt="Recuerdo 5 de Isa">
+                    </div>
+                    <p>Un instante especial</p>
+                </div>
+
+                <div class="foto-galeria">
+                    <div class="espacio-foto">
+                        <img src="multimedia/galeria/foto-general6.jpg" alt="Recuerdo 6 de Isa">
+                    </div>
+                    <p>Top Mewing</p>
+                </div>
+
+                <div class="foto-galeria">
+                    <div class="espacio-foto">
+                        <img src="multimedia/galeria/foto-general10.jpg" alt="Recuerdo Isa y su mamá">
+                    </div>
+                    <p>Un recuerdo eterno 💛</p>
+                </div>
+
+                <div class="foto-galeria">
+                    <div class="espacio-foto">
+                        <img src="multimedia/galeria/foto-general9.jpg" alt="Recuerdo 8 de Isa">
+                    </div>
+                    <p>Momentos inolvidables</p>
+                </div>
+
+                <!-- Acceso a recuerdos con amigos-->
+                <div class="tarjeta-recuerdos-amigos" id="abrir-recuerdos-amigos">
+                    <span class="icono-recuerdos-amigos">💛📸💛</span>
+                    <h3>¡Más recuerdos de Isa y sus amigos!</h3>
+                    <p>Porque los buenos momentos merecen quedarse para siempre.</p>
+                    <span class="texto-ver-recuerdos">Ver algunos recuerdos</span>
+                </div>
+            </div>
+         </section>
+        
+         <!-- Algunos Mensajes -->
+          <section id="bloc-notas">
+            <div class="encabezado-seccion">
+                <p class="subtitulo-seccion">Palabras con Cariño</p>
+                <h2>Algunos mensajes</h2>
+                <p>Pequeñas palabras de personas que también quieren hacer parte de este día especial.</p>
+            </div>
+            <!--Mensaje de Papá Hans-->
+            <div class="contenedor-mensajes">
+                <article class="tarjeta-mensaje" data-mensaje="papa">
+                    <span class="icono-mensaje">🧔</span>
+                    <h3>Papá</h3>
+                    <p class="mensaje-texto">
+                        Aqui va un mensaje
+                    </p>
+                </article>
+            <!--Mensaje de Mami Luz-->
+                <article class="tarjeta-mensaje" data-mensaje="mama">
+                    <span class="icono-mensaje">🌹</span>
+                    <h3>🌹Mamá🌹</h3>
+                    <p class="mensaje-texto">
+                        Una vida llena de alegrias
+                    </p>
+                </article>
+            <!--Mensaje de Hermana Hanna-->
+                <article class="tarjeta-mensaje" data-mensaje="hanna">
+                    <span class="icono-mensaje">💕</span>
+                    <h3>💓Hanna💓</h3>
+                    <p class="mensaje-texto">
+                        Otra dedicatoria
+                    </p>
+                </article>
+            <!--Mensaje de Angel-->
+            <article class="tarjeta-mensaje" data-mensaje="angel">
+                <span class="icono-mensaje">🩵</span>
+                <h3>Angel</h3>
+                <p class="mensaje-texto">
+                    Grandes sentimientos detrás de pequeñas palabras.
+                </p>
+            </article>
+            <!--Mensaje de Amigos-->
+            <article class="tarjeta-mensaje tarjeta-colectiva" data-mensaje="amigos">
+                <span class="icono-mensaje">💌💌💌</span>
+                <h3>Mensajes de</h3>
+
+                <div class="lista-mensaje">
+                    <p><strong>Algunos de tus amigos:</strong> Palabras especiales para Isa 💖</p>
+                </div>
+            </article>
+            </div>
+          </section>
+        <!-- Ventana dedicatorias-->
+         <div id="modal-mensaje" class="modal-mensaje" hidden>
+            <div class="contenido-modal-mensaje">
+                <button id="cerrar-mensaje" class="cerrar-modal">
+                    ❌
+                </button>
+
+                <p class="subtitulo-mensaje">Palabras con Cariño</p>
+                <h2 id="titulo-mensaje">Para Isabela</h2>
+                <div id="texto-mensaje" class="texto-mensaje">
+                    <!-- Aquí va la dedicatoria-->
+                </div>
+                <p class="firma-mensaje">
+                    Con mucho cariño 💛
+                </p>
+            </div>
+         </div>
+
+        <!-- Canción para Isa -->
+         <section id="cancion">
+
+            <div class="encabezado-seccion">
+                <p class="subtitulo-seccion">Sentimientos plasmados en una canción</p>
+                <h2>Una canción para tí</h2>
+                <p>Porque hay sentimientos que encuentran su mejor forma de expresarse a través de la música.</p>
+            </div>
+
+            <div class="contenedor-cancion">
+                <div class="galeria-cancion">
+                    <img
+                        src="multimedia/cancion/portada-cancion.jpeg"
+                        alt="Portada de la canción para Isa"
+                        >
+
+                    <img
+                        src="multimedia/cancion/foto-cancion3.jpeg"
+                        alt="Recuerdo de Isa"
+                    >
+                    <img 
+                        src="multimedia/cancion/foto-cancion2.jpeg"
+                        alt="Otro recuerdo de Isa"
+                    >
+                </div>
+
+                <div class="contenido-cancion">
+                    <p class="etiqueta-cancion">Escrita para tí, Beli</p>
+                    <h3>¡Qué suerte la mía!</h3>
+
+                    <div class="letra-cancion">
+                        <p>Quién diría que después de tantos años,<br>
+                            de tantas vueltas que nos dio la vida,<br>
+                            aquella niña que conocí en el colegio<br>
+                            sería hoy una parte tan bonita de mis días.
+                        </p>
+                        <p>Recuerdo las risas en aquellos pasillos,<br>
+                            las tardes jugando y las horas de más,<br>
+                            esas veces que terminamos empapados,<br>
+                            y las noches mirando estrellas desde tu hogar.
+                        </p>
+                        <p>
+                            Aunque hoy estés tan  lejos de mí,<br>
+                            siempre encontramos motivos para hablar<br>
+                            entre llamadas, películas y tonterías,<br>
+                            no hay distancia que nos quite las ganas de estar
+                        </p>
+
+                        <p>
+                            Y quiero verte feliz, cumpliendo tus sueños<br>
+                            creciendo y brillando cada día más,<br>
+                            quiero estar presente en tus nuevos comienzos<br>
+                            y verte orgullosa de todo lo que lograrás.
+                        </p>
+
+                        <p>
+                            Porque admiro la persona que eres,<br>
+                            y todo lo bonito que hay dentro de tí,<br>
+                            y si algo tengo claro después de estos años,<br>
+                            es que qué suerte la mía de tenerte aquí.
+                        </p>
+
+                        <p>
+                            Y si algún día miras hacia atrás,<br>
+                            recuerda aquel colegio y lo que comenzó,<br>
+                            que aquel muchacho que te conoció en sexto,<br>
+                            todavía te mira con la misma ilusión.
+                        </p>
+
+                        <p>
+                            Feliz cumpleaños, mi amor,<br>
+                            que la vida te regale lo mejor.<br>
+                            Y entre tantos recuerdos que nos quedan por vivir<br>
+                            ojalá nunca nos falten motivos para sonreír.
+                        </p>
+                    </div>
+
+                    <p class="firma-cancion">De tu admirador no tan secreto, con mucho cariño para tí, Isabela 💙</p>
+                </div>
+            </div>
+         </section>
+
+        <!-- Despedida -->
+         <section id="despedida">
+            <div class="contenido-despedida">
+
+                <div class="mural-decoraciones">
+                     <span>🌻</span>
+                    <span>🏐</span>
+                    <span>🎨</span>
+                    <span>💛</span>
+                    <span>💃</span>
+                    <span>⭐</span>
+                </div>
+
+                <p class="subtitulo-seccion">HASTA NUESTRO PRÓXIMO RECUERDO</p>
+                <h2>Y esto no termina aquí...</h2>
+
+                <div class="carta-despedida">
+                    <p class="mensaje-despedida">
+                        Hoy celebramos tus 18 años, pero también los momentos que nos han traído hasta aquí.
+
+                    <br><br>
+                     Gracias por tantas risas, charlas, recuerdos y por seguir formando parte de mi vida.
+
+                    <br><br>
+                        Que este nuevo capítulo esté lleno de sueños cumplidos, aventuras y muchísimas razones para sonreír.
+                    </p>
+
+                    <p class="firma-despedida">
+                        Con muchísimo cariño,
+                        <br>
+                        tu amor de siempre. 💛🩵💛
+                    </p>
+                </div>
+            </div>
+
+            <div class="mural-decoraciones mural-final">
+                <span>🦋</span>
+                <span>🌷</span>
+                <span>✨</span>
+                <span>🌻</span>
+                </div>
+         </section>
+
+         <div class="aviso-final">
+            <p>⚠️ ¡No ingresar! ⚠️</p>
+
+            <a href="https://youtu.be/QDia3e12czc?si=PN0TbOOM8ghdPP7O"
+            target="_blank"
+            rel="noopener norefeer">
+                Ver enlace    
+            </a>
+         </div>
+      </main>
+      <!-- Ventana Personalizada para salir-->
+       <div id="modal-salir" class="modal-salir" hidden>
+        <div class="contenido-modal-salir">
+            <h2>¿Segura que quieres salir, Beli?</h2>
+
+            <p>
+                Hay un regalito esperando por tí.
+                ¿De verdad quieres irte?
+            </p>
+
+            <div class="botones-salir">
+                <button id="cancelar-salida">Quedarme</button>
+                <button id="confirmar-salida">Salir</button>
+            </div>
+
+            <p id="aviso-salida" hidden>
+                  Tu navegador no permite cerrar esta pestaña automáticamente.
+                 Puedes cerrarla desde el navegador.
+            </p>
+        </div>
+       </div>
+     <!-- Audio de Broma-->
+      <audio id="audio-sorpresa" preload="auto">
+        <source src="multimedia/portada/audio/sorpresa.mp3" type="audio/mpeg">
+      </audio>
+
+      <!-- Música de fondo-->
+       <audio id="musica-fondo" loop preload="auto">
+        <source src="multimedia/cancion/musica-fondo.mp3" type="audio/mpeg">
+       </audio>
+    <script src="JS/script.js"></script>
+</body>
+</html>
